@@ -88,11 +88,6 @@ class Pkgbuild
     end
   end
 
-  def write path
-    pkgbuild_path = File.join path, 'PKGBUILD'
-    File.write pkgbuild_path, contents
-  end
-
   def ask_pkgname
     @pkgname = ask 'What is the package name (pkgname) you want to use?'
 
