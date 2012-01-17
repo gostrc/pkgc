@@ -8,7 +8,7 @@ module Pkgbuild_Detection
       # gnu autoconf generated
       @build_system = 'gnu'
 
-      if File.read('Makefile.in').match /^check:/
+      if File.exists?('Makefile.in') && File.read('Makefile.in').match(/^check:/)
 	@check_target = "check"
       end
     end
